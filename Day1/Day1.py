@@ -17,14 +17,11 @@ print(floor)
 # Part 2
 
 floor = 0
-count = 0
-for _ in data:
-    count += 1
-    if _ == "(":
+for count, value in enumerate(data, start=1):
+    if value == "(":
         floor += 1
     else:
         floor -= 1
     if floor == -1:
+        print(count)
         break
-
-print(count)
